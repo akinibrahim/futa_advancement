@@ -1,0 +1,104 @@
+﻿{
+	"toJSON": true,
+	"extraProperties": {
+		"version": "2",
+		"classes": {
+			"Mainmenu": {
+				"panelColor": "#996699",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 10,
+						"Y": 62
+					}
+				}
+			},
+			"Submenu": {
+				"panelColor": "#eee",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 344,
+						"Y": 243
+					}
+				}
+			}
+		},
+		"model": {
+			"scriptMode": "manual",
+			"workspaceLeft": 0,
+			"workspaceTop": 0
+		}
+	},
+	"dataClasses": [
+		{
+			"name": "Mainmenu",
+			"className": "Mainmenu",
+			"collectionName": "MainmenuCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "menuname",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "submen",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "SubmenuCollection",
+					"reversePath": true,
+					"path": "mainme"
+				}
+			]
+		},
+		{
+			"name": "Submenu",
+			"className": "Submenu",
+			"collectionName": "SubmenuCollection",
+			"scope": "public",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "name",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "mainme",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"type": "Mainmenu",
+					"path": "Mainmenu"
+				},
+				{
+					"name": "url",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				}
+			]
+		}
+	]
+}
