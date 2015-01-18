@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.Saad.wakanda.phonegap.firstTest"
+        version   = "0.0.30">
+    <name>ADVANCEMENT CENTRE</name>
+
+    <description>
+        An application that is the mobile version of advancement centre website
+    </description>
+
+    <author href="http://github.com/saadmos" email="saadmos06@gmail.com">
+        Makinde Ibrahim
+    </author>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/contacts"/>
+
+    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+	<preference name="android-installLocation" value="preferExternal" />
+
+
+    <icon src="icon.png" />
+
+    <gap:splash src="splash.png"/>
+</widget>
